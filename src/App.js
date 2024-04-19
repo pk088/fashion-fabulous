@@ -17,15 +17,15 @@ function App() {
       <BrowserRouter>
         <Navbar />
         <Routes>
-          <Route path="/fashion-fabulous" element={<Shop />} />
-          <Route path="/mens" element={<ShopCategory banner={men_banner} category="men" />} />
-          <Route path="/womens" element={<ShopCategory banner={women_banner} category="women" />} />
-          <Route path="/kids" element={<ShopCategory banner={kid_banner} category="kid" />} />
-          <Route path="/product" element={<Product/>}>
+          <Route exact path="/fashion-fabulous" element={<Shop />} />
+          <Route exact path="/mens" element={<ShopCategory banner={men_banner} category="men" />} />
+          <Route exact path="/womens" element={<ShopCategory banner={women_banner} category="women" />} />
+          <Route exact path="/kids" element={<ShopCategory banner={kid_banner} category="kid" />} />
+          <Route exact path="/product" element={<Product/>}>
             <Route path=":productId" element={<Product />} />
           </Route>
-          <Route path="/cart" element={<Cart/>}/>
-          <Route path="/login" element={<LoginSignup/>}/>
+          <Route exact path="/cart" element={<Cart/>}/>
+          <Route exact path="/login" element={<LoginSignup/>}/>
         </Routes>
         {window.location.pathname !== '/mens' && <Footer /> }
         {/* <Footer /> */}
