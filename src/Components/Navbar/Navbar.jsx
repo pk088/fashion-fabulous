@@ -21,7 +21,7 @@ const Navbar = () => {
             setMenu("shop");
           }}
         >
-          <Link style={{ textDecoration: "none" }} to={"/"}>
+          <Link style={{ textDecoration: "none" }} to={"/fashion-fabulous"}>
             Shop
           </Link>{" "}
           {menu === "shop" && <hr />}
